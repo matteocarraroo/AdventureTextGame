@@ -16,3 +16,9 @@ class Item():
   
   def get_description(self):
     return self.description
+  #Room setters and getters
+  def set_room(self, room):
+    self.room = room
+  def get_room(self):
+    return self.room
+    

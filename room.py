@@ -8,6 +8,7 @@ class Room():
     self.description= None
     self.linked_rooms = {}
     self.character = None
+    self.item = None
     Room.number_of_rooms = Room.number_of_rooms + 1
     
   #Name setter and getter
@@ -33,7 +34,7 @@ class Room():
         for direction in self.linked_rooms:
             room = self.linked_rooms[direction]
             print( "The " + room.get_name() + " is " + direction + ".")
-
+#Get current character
   def get_character(self):
     return self.character
 
@@ -46,3 +47,10 @@ class Room():
     else:
       print("There's nothing there...")
       return self
+#Get and set item
+      
+  def set_item(self, item):
+    self.item = item
+    
+  def get_item(self):
+    return self.item
