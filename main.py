@@ -32,10 +32,10 @@ sword = Item()
 sword.set_name("Sword")
 cheese = Item()
 cheese.set_name("Cheese")
-cheese.set_room(dining_hall)
-sword.set_room(ballroom)
+cheese.set_description("An eerily large block of cheese...")
+sword.set_description("A very sharp sword.")
 dining_hall.set_item(cheese)
-ballroom.set_item(ballroom)
+kitchen.set_item(sword)
 #Characters
 matt = Enemy("Matt", "An evil knight")
 matt.set_conversation("What are you doing in here, adventurer?")
@@ -50,13 +50,16 @@ dead = False
 while dead == False:
   print("\n")
   current_room.get_details()
-  combat_item = current_room.get_item()
-  print(combat_item)
 
   inhabitant= current_room.get_character()
   if inhabitant is not None:
     inhabitant.describe()
-  
+
+  item = current_room.get_item()
+  if item is not None:
+    item.describe()
+
+    
   command= input("> Do you want to move (enter the direction), talk or fight? ")
   command = command.lower()
 

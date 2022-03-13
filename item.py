@@ -3,11 +3,10 @@ class Item():
   def __init__(self):
     self.name= None
     self.description= None
-    self.room= None
-  #Name setter and getter
+  #Name getter
+
   def set_name(self, item_name):
-    self.name= item_name
-  
+    self.name = item_name
   def get_name(self):
     return self.name
   #Description setter and getter  
@@ -16,9 +15,7 @@ class Item():
   
   def get_description(self):
     return self.description
-  #Room setters and getters
-  def set_room(self, room):
-    self.room = room
-  def get_room(self):
-    return self.room
+#Describe item
+  def describe(self):
+    print(f"There is a {self.name} in this room -  {self.description}")
     
