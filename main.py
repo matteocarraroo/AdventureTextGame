@@ -87,6 +87,9 @@ while dead == False:
       #What happens if you win?
         print("Hooray, you won the fight!")
         current_room.set_character(None)
+        if Enemy.enemies_to_defeat == 0:
+                    print("Congratulations, you defeated all the enemies!")
+                    dead = True
       else:
       #What happens if you lose?
         print("Oh dear, you lost the fight.")
