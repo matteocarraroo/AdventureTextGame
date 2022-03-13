@@ -17,5 +17,5 @@ class Item():
     return self.description
 #Describe item
   def describe(self):
-    print(f"There is a {self.name} in this room -  {self.description}")
+    print(f"There is a {self.name} in this room. {self.description}")
     

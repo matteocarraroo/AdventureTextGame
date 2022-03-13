@@ -9,6 +9,7 @@ spooky_castle.welcome()
 RPGInfo.info()
 RPGInfo.author = "Matteo Carraro"
 #Creating all objects (rooms)
+inventory = []
 kitchen= Room()
 ballroom= Room()
 dining_hall= Room()
@@ -60,7 +61,7 @@ while dead == False:
     item.describe()
 
     
-  command= input("> Do you want to move (enter the direction), talk or fight? ")
+  command= input("> Do you want to move (enter the direction), talk, fight or take the object in the room? ")
   command = command.lower()
 
   if command in ["north", "south", "east", "west"]:
@@ -94,6 +95,12 @@ while dead == False:
     else:
       print("There is no one here to fight with...")
     time.sleep(0.5)
+
+  elif command == "take":
+    if item is not None:
+      print(f"You put the {item.get_name()} in your inventory.")
+      inventory.append(item.get_name())
+      current_room.set_item(None)
 #  elif command == "hug":
     
 RPGInfo.credits()
