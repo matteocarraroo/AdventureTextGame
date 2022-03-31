@@ -3,17 +3,9 @@
     "character.py": [
       {
         "id": "795191e8-1f37-4c47-b709-476b7f703d02",
-        "line": 29,
-        "version": 934,
-        "index": 842
-      }
-    ],
-    "room.py": [
-      {
-        "id": "35ebd58f-87a1-4b57-a1ae-69dd68cfe4c1",
-        "line": 8,
-        "version": 2115,
-        "index": 139
+        "line": 22,
+        "version": 1218,
+        "index": 734
       }
     ]
   }
